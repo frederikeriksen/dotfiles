@@ -1,6 +1,10 @@
 syntax on
 set number
 set ruler
+set noswapfile
+set hlsearch
+set ignorecase
+set incsearch
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
@@ -20,6 +24,10 @@ set hidden
 " Automatically add closing braces
 inoremap {<CR> {<CR>}<Esc>ko
 inoremap [<CR> [<CR>]<Esc>ko
+
+inoremap jk <ESC>
+ 
+let mapleader = "'"
 
 " Plugins
 call plug#begin()
