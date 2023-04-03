@@ -57,3 +57,8 @@ let g:go_highlight_extra_types=1
 let g:go_highlight_build_contraints=1
 let g:go_highlight_generate_tags=1
 let g:lsp_diagnostics_echo_cursor=1
+
+" Vim-lsp
+nnoremap <leader>dh :LspHover<cr>
+nnoremap <leader>dd :LspDefinition<cr>
+nnoremap <leader>dr :LspReferences<cr>
