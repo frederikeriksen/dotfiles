@@ -7,8 +7,8 @@ vim.api.nvim_create_autocmd('lspAttach', {
         end
 
         bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
-        bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition<cr>')
-        bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration<cr>')
+        bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+        bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
         bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
     end
 })
