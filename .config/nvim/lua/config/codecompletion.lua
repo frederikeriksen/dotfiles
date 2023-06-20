@@ -6,10 +6,12 @@ vim.api.nvim_create_autocmd('lspAttach', {
             vim.keymap.set(mode, lhs, rhs, opts)
         end
 
-        bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
-        bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
-        bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
-        bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+        bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
+        bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', { noremap = true, silent = true })
+        bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', { noremap = true, silent = true })
+        bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', { noremap = true, silent = true })
+        
+        
     end
 })
 
@@ -24,6 +26,10 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
 
 lspconfig.lua_ls.setup({})
 lspconfig.gopls.setup({})
+lspconfig.pyright.setup({})
+lspconfig.tsserver.setup({})
+lspconfig.html.setup({})
+lspconfig.css.setup({})
 
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
